@@ -20,5 +20,6 @@ factor n = [x | x <- [1..n], n `mod` x == 0]
 f :: Integer -> Integer -> [Integer]
 f 1 _ = []
 f n m = if n `mod` m == 0 then m : (f (n `div` m) m) else f n (m+1)
+ans3 = maximum $ f num 2
 
 
